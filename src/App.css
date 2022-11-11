@@ -5,7 +5,7 @@
 }
 body{
   overflow: hidden;
-  background-color: cadetblue;
+  background: linear-gradient(to right, rgba(182, 115, 174, 0.734), rgb(17, 117, 105));
   font-family: monospace;
   font-size: 1rem;
 }
@@ -205,11 +205,12 @@ input{
    position: fixed;
    bottom: 100%;
    left: 10%;
+   transition: .5s;
     
   }
   .show{
     top:5% ;
-    
+    transition: .5s;
   }
   .user-map{
     height: auto;
@@ -224,7 +225,7 @@ input{
   }
 }
 .close-button{
-  text-shadow: 2px 2px 2px black;
+  text-shadow: none;
   font-size:1.5rem;
   left: 11rem;
   bottom:550px;
