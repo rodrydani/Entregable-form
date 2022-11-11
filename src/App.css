@@ -175,7 +175,8 @@ input{
 }
 @media (max-width: 558px){
   body{
-    overflow-y: scroll;
+    overflow-y:initial;
+    overflow-x: hidden;
   }
   .users-tittle{
     position: initial;
@@ -183,6 +184,7 @@ input{
    width: auto;
    margin:2rem 1rem ;
   }
+
   .user-map{
     display: flex;
     flex-direction: column;
@@ -200,11 +202,13 @@ input{
   }
   
   .form-list{
-    top: 3rem;
-    left: 150%;
+   
+   bottom: 100%;
+    left: 20%;
+    
   }
   .show{
-    left:15%;
+    bottom:5%;
   }
   .user-map{
     height: auto;
@@ -220,6 +224,9 @@ input{
 }
 .close-button{
   text-shadow: 2px 2px 2px black;
+  font-size:1.5rem;
+  left: 11rem;
+  bottom:550px;
 }
 .close-button:active{
   transform: translatey(0px) translateX(0px);
@@ -231,6 +238,7 @@ input{
 }
 
 @media (max-width: 300px){
+ 
 
   .users-tittle{
     position: initial;
