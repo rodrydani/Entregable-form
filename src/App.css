@@ -202,13 +202,14 @@ input{
   }
   
   .form-list{
-   
+   position: fixed;
    bottom: 100%;
    left: 10%;
     
   }
   .show{
-    bottom:0%;
+    top:5% ;
+    
   }
   .user-map{
     height: auto;
@@ -254,7 +255,7 @@ input{
   .button-add{
     position: initial;
   }
-  
+
  
   .user-map{
     height: auto;
