@@ -93,7 +93,7 @@ const UsersForm = ({addUser,selectUser,updateUser,userSelect}) => {
             <div className="password-container">
                 <label htmlFor="password">password</label>
                 <input 
-                type="text" 
+                type="password" 
                 id="password"
                 onChange={(e)=>setPassword(e.target.value)}
                 value={password}
