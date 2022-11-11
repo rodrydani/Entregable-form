@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react'
+import Swal from 'sweetalert2'
 
 
 const UsersForm = ({addUser,selectUser,updateUser,userSelect}) => {
@@ -36,13 +37,16 @@ const UsersForm = ({addUser,selectUser,updateUser,userSelect}) => {
             first_name:first_name,
             last_name:last_name,
             birthday:birthday
+            
         };
+        
         if (selectUser){
             updateUser(newUser);
         } else {
             addUser(newUser);
         };
         reset();
+      
     };
      const reset=()=>{
         setEmail("");
@@ -54,7 +58,14 @@ const UsersForm = ({addUser,selectUser,updateUser,userSelect}) => {
      const handleClick =()=>{
         setOpen(!open)
        }
-      
+       
+      const showAlert =()=>{
+        Swal.fire({
+            title: "Success",
+            text: "the operation was completed successfully",
+            icon: "success",
+          });
+      }
 
     return (
         <div >
@@ -109,7 +120,7 @@ const UsersForm = ({addUser,selectUser,updateUser,userSelect}) => {
                 value={birthday}
                 />
             </div>
-            <button className='submit'>submit</button>
+            <button onClick={showAlert}  className='submit'>submit</button>
              {selectUser && (
                  <button className='cancel' type="button" onClick={() => userSelect(null)}> Cancel</button>
             ) }
